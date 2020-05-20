@@ -1,0 +1,80 @@
+body{
+    background: rgba(47,79,79,0.9);
+    margin:0;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    
+}
+h1{
+    font-size: 36px;
+}
+.showcase:hover .content{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+.showcase::after{
+    content:'';
+    height: 100vh;
+    width: 100%;
+    background: url('./img/code.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display:block;
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+    transition: all 1000ms;
+}
+.showcase:hover::after{
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+.content{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    transition: all 1000ms;
+    
+}
+.content .title{
+   font-size: 2.2rem;
+   margin-top: 1rem;
+}
+.content .text{
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+.container{
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+.icon{
+    float: right;
+    
+}
+.center{
+    text-align: center;
+    margin: auto;
+}
+.shade{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 100%;
+}
+.grid-2{
+    display: grid;
+    grid-row: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
